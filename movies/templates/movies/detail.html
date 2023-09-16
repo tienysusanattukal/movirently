@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th> MOVIE NAME </th>
+                <th> GENRE </th>
+                <th> YEAR OF RELEASE </th>      
+                <th> NO OF DVDS AVAILABLE </th>
+                <th> RENTAL RATE PER DAY  (in USD $)</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>{{ moo.name}}</td>
+                    <td>{{moo.genre}} </td>
+                    <td>{{moo.year_of_release}} </td>
+                    <td>{{moo.no_of_dvd_for_rent}}  </td>
+                    <td> {{ moo.rental_rate_per_day}} </td>
+                
+                </tr>
+
+            
+            
+        </tbody>
+    </table>
+{% endblock %}

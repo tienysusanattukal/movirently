@@ -1,27 +1,29 @@
-<h1>hello this is a movie page</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th> MOVIE NAME </th>
-            <th> GENRE </th>
-            <th> YEAR OF RELEASE </th>      
-            <th> NO OF DVDS AVAILABLE </th>
-            <th> RENTAL RATE PER DAY </th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        {% for movie in movi %}
-            <tr>
-                <td>{{ movie.name}}</td>
-                <td>{{movie.genre}} </td>
-                <td>{{movie.year_of_release}} </td>
-                <td>{{movie.no_of_dvd_for_rent}}  </td>
-                <td> {{ movie.rental_rate_per_day}} </td>
-               
-            </tr>
+{% extends 'base.html'%}
+    {% block content %}
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th> MOVIE NAME </th>
+                    <th> GENRE </th>
+                    <th> YEAR OF RELEASE </th>      
+                    <th> NO OF DVDS AVAILABLE </th>
+                    <th> RENTAL RATE PER DAY </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movi %}
+                    <tr>
+                        <td>{{ movie.name}}</td>
+                        <td>{{movie.genre}} </td>
+                        <td>{{movie.year_of_release}} </td>
+                        <td>{{movie.no_of_dvd_for_rent}}  </td>
+                        <td> {{ movie.rental_rate_per_day}} </td>
+                    
+                    </tr>
 
-        {% endfor %}
-        
-    </tbody>
-</table>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    {% endblock %}
