@@ -8,7 +8,8 @@ def index(request):
     return render(request,'movies/index.html',{'movi':mov})
 
 def detail(request,movie_id):
-    mo = get_object_or_404(Movie,pk=movie_id)
+    
+    mo = get_object_or_404(Movie, pk=movie_id)
     return render(request,'movies/detail.html',{'moo':mo})
 
 
