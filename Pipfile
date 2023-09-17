@@ -10,6 +10,7 @@ django-tastypie = "*"
 python-dotenv = "*"
 gunicorn = "*"
 whitenoise = "*"
+vercel = "*"
 
 [dev-packages]
 
