@@ -15,7 +15,7 @@
                 {% for movie in movi %}
                     <tr>
                         
-                        <td> <a href="{% url 'movies_detail' movie.id %} ">{{ movie.name}}</a> </td>                        
+                        <td> <a href="{% url 'movies_detail' movie.id %} " style="text-decoration: none;" >{{ movie.name}}</a> </td>                        
                         <td>{{movie.genre}} </td>
                         <td>{{movie.no_of_dvd_for_rent }} </td>       
                         <td> {{ movie.rental_rate_per_day}} </td>
